@@ -1,0 +1,31 @@
+{
+  "name": "20kural",
+  "version": "1.0.0",
+  "description": "Göz sağlığı yardımcısı",
+  "main": "src/index.js",
+  "author": {
+    "email": "hello@isaeken.com.tr",
+    "name": "İsa Eken",
+    "url": "https://www.isaeken.com.tr"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/isaeken/20kural",
+  "readme": "README.md",
+  "scripts": {
+    "start": "electron .",
+    "tailwind": "npx tailwindcss -i src/app.css -o ./dist/app.css",
+    "production": "cross-env NODE_ENV=production npx tailwindcss -i src/app.css -o ./dist/app.css --minify",
+    "build": "electron-packager . 20kural --all --executableName='20kural' --icon='./icon.ico' --name='20Kural' --out='./build'"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^14.0.0",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "electron-packager": "^15.3.0",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.9"
+  }
+}
